@@ -1,0 +1,29 @@
+{% extends 'inventory/main.html'%}
+{% load inventory_tags %}
+{%load crispy_forms_tags %}
+{% block header%}
+Add {{item}}
+{% endblock header%}
+{%block content%}
+  
+    {%if messages%}
+    {%for message in messages%}
+    <div class="alert alert-{{message.tags}}">
+      {{message}}
+    </div>
+    {%endfor%}
+    {%endif%}
+  
+        <h5> Enter quantity of item "{{item}}" you want to add </h5>
+        <form method="POST">
+        {% csrf_token %}
+        {{addExistingform|crispy}}
+        <button class="btn btn-info" type="Submit">Add</button>
+        </form>
+        
+    <h1 class="mt-4 mb-4"> Current status </h1>
+    <h2>Working: {{working}} </h2>
+    <h2>Out of order: {{out_of_order}} </h2>
+    <h2>In Maintenance:  {{in_maintenance}} </h2>
+
+{%endblock%}

@@ -1,0 +1,102 @@
+{% extends 'inventory/main.html'%}
+{% block header%}
+Settings
+{% endblock header%}
+{% block content%}
+<!-- First Item -->
+<div class="row">
+  <div class="col">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Floor
+        </h4>
+      </div>
+      <div>
+        <a href="{% url 'createfloor'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right:20px;"></span>Add</li>
+        </a>
+        <a href="{% url 'editFloor'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:20px;"></span>Edit
+          </li>
+        </a>
+        <a href="{% url 'deletefloor' %}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-remove" style="margin-right:20px;"></span>Delete
+          </li>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Here -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <!-- This had to be made an inactive link otherwise it'd point to /deletefloor! -->
+          <a href="" class="text-dark text-decoration-none">Room</a>
+        </h4>
+      </div>
+      <div>
+        <a href="{% url 'createroom'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right:20px;"></span>Add</li>
+        </a>
+        <a href="{% url 'showRooms'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:20px;"></span>Edit
+          </li>
+        </a>
+        <a href="{% url 'deleteRoom'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-remove" style="margin-right:20px;"></span>Delete
+          </li>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Second Item -->
+<div class="row">
+  <div class="col">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Category
+        </h4>
+      </div>
+      <div>
+        <a href="{% url 'createCategory'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-plus" style="margin-right:20px;"></span>Add</li>
+        </a>
+        <a href="{% url 'showCategories'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-pencil" style="margin-right:20px;"></span>Edit
+          </li>
+        </a>
+        <a href="{% url 'deleteCategory'%}">
+          <li class="list-group-item"><span class="glyphicon glyphicon-remove" style="margin-right:20px;"></span>Delete
+          </li>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Fourth Item -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Admin
+        </h4>
+      </div>
+      <div>
+        <a href="{% url 'editAccount'%}">
+          <li class="list-group-item">
+            <span class="glyphicon glyphicon-pencil" style="margin-right:20px;"></span>
+            Update Info
+          </li>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock content%}
