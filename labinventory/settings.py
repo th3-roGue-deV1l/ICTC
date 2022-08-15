@@ -132,7 +132,10 @@ USE_L10N = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT=os.join(BASE_DIR,'staticfiles')
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'home/'
 LOGOUT_REDIRECT_URL = '/'
+
