@@ -4,7 +4,7 @@ from collections import defaultdict
 from typing import DefaultDict
 from django.db import models
 import datetime
-from django.contrib.postgres.fields import JSONField
+from django.db.models import JSONField
 from django.core.exceptions import ValidationError
 from django.db.models.fields import CharField
 from django.utils.translation import gettext_lazy

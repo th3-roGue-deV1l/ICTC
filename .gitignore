@@ -1,9 +1,96 @@
-# .gitignore
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.pyc
+*.pyo
+__pycache__/
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
 env/
-inventory/__pycache__
-inventory/migrations
-inventory/templatetags/__pycache__
-labinventory/__pycache__
+ENV/
+venv.bak/
+venv3/
+*.env
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+__pycache__/
 db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Local settings
+settings_local.py
+
+# PostgreSQL database dumps
+*.dump
+*.sql
+
+# Environment variables
+.env
+
+# Docker
+# Ignore Docker-related files except Dockerfile and docker-compose.yml
+.dockerignore
+docker-compose.override.yml
+
+# Node modules (if using Node.js/React for front-end)
+node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VSCode
 .vscode/
-# labinventory/settings.py
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Thumbnails
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
